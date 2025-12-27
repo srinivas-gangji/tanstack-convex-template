@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tanstack-convex-template",
+  "compatibility_date": "2025-09-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  "assets": {
+    "directory": "./dist/client"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "env": {
+    "preview": {
+      "name": "tanstack-convex-template-preview",
+      "vars": {
+        "APP_ENV": "preview"
+      }
+    },
+    "production": {
+      "name": "tanstack-convex-template-production",
+      "vars": {
+        "APP_ENV": "production"
+      }
+    }
+  }
+}
